@@ -58,4 +58,4 @@ student-feedback-app/
 - Improve the design with Bootstrap
 
 ## Authors
-Your Name | MSc IT
+DHRUV PATEL | MSc IT
