@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Student Feedback App</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 480px; margin: 40px auto; }
+    input, textarea { width: 100%; padding: 8px; margin: 6px 0 14px; box-sizing: border-box; }
+    button { padding: 8px 18px; }
+    fieldset { margin-bottom: 24px; }
+  </style>
+</head>
+<body>
+  <h1>Student Feedback App</h1>
+
+  <!-- POST: data goes in the request body, not in the URL -->
+  <fieldset>
+    <legend>Give feedback (doPost)</legend>
+    <form method="post" action="feedback">
+      <label>Your name</label>
+      <input type="text" name="name" required>
+      <label>Your feedback</label>
+      <textarea name="message" rows="3" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </fieldset>
+
+  <!-- GET: data goes in the URL (?search=...) -->
+  <fieldset>
+    <legend>Search feedback (doGet)</legend>
+    <form method="get" action="feedback">
+      <label>Search by name (leave empty to see all)</label>
+      <input type="text" name="search">
+      <button type="submit">Search</button>
+    </form>
+  </fieldset>
+</body>
+</html>
